@@ -1,0 +1,19 @@
+{
+  "name": "backend_node_server",
+  "version": "1.0.0",
+  "description": "have to test node and express",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "backend_node_server"
+  },
+  "author": "raphael pazdzior",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
