@@ -14,12 +14,12 @@ const app = require('./app');
     res.end('Voilaaaaa') // methode end de l'objet reponse
 });
 */
-const port = process.env.PORT || '3000';
+const port = process.env.PORT || '3000';  //variable environnement : si la plateforme de déploiement propose un port par défaut
 app.set('port', port); // on doit préciser a express sur quel port l'appli va tourner
 
 
 
-//a fonction errorHandler  recherche les différentes erreurs et les gère de manière appropriée. Elle est ensuite enregistrée dans le serveur ;
+//la fonction errorHandler  recherche les différentes erreurs et les gère de manière appropriée. Elle est ensuite enregistrée dans le serveur ;
 const errorHandler = error => {
     if (error.syscall !== 'listen') {
       throw error;
@@ -39,7 +39,7 @@ const errorHandler = error => {
         throw error;
     }
   };
-const server = http.createServer(app);
+const server = http.createServer(app); // on passe l'express, fonction qui réagira aux requetes entrantes
 
 server.on('error', errorHandler);
 
@@ -53,7 +53,7 @@ server.on('listening', () => {
 
 // fin  écouteur d'évènements
 
-//le serveur doit écouter et attendre : variable environnement : si la plateforme de déploiement propose un port par défaut
+//le serveur doit écouter et attendre
 server.listen(port)
 
 
