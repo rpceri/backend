@@ -29,7 +29,7 @@ exports.signup = (req, res, next) => {
               return res.status(401).json({ error: 'Mot de passe incorrect !' });
             }
             res.status(200).json({
-                // wt.sign : userId ce qu'on va utliser pour encoder (=payload (les données encodées dans le token)) , RANDOM_TOKEN_SECRET = clé quis ervira a l'encodage, doit etre changé
+                // jwt.sign : userId ce qu'on va utliser pour encoder (=payload (les données encodées dans le token)) , RANDOM_TOKEN_SECRET = clé quis ervira a l'encodage, doit etre changé
                 userId: user._id,
                 token: jwt.sign(
                 { userId: user._id },
