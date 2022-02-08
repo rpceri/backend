@@ -22,7 +22,7 @@ mongoose.connect('mongodb+srv://raphMongo:07gm5VzfqPMNJMK9@cluster0.26zw1.mongod
 
 const app = express();
 
-app.use(express.json());  //met les données post posté à l'api à dispo dans req.body  (rend les données du corps de la requête exploitables comme pouvait le faire body-parser avant)
+app.use(express.json());  //met les données post posté à l'api à dispo dans req.body (rend les données du corps de la requête exploitables dans req.body comme pouvait le faire body-parser avant)
 
 //headers permettant de lever l'erreur causées par le CORS  « Cross Origin Resource Sharing » (le serveur et le client ne partagent pas la même origine) et donc :
 //d'accéder à notre API depuis n'importe quelle origine ( '*' ) ;
