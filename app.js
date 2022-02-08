@@ -12,6 +12,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const stuffRoutes = require('./routes/stuff');
+const userRoutes = require('./routes/user'); // pour authentification
 
 mongoose.connect('mongodb+srv://raphMongo:07gm5VzfqPMNJMK9@cluster0.26zw1.mongodb.net/Cluster0?retryWrites=true&w=majority',
   { useNewUrlParser: true,
@@ -34,5 +35,6 @@ app.use(express.json());  //met les données post posté à l'api à dispo dans 
   });
 
   app.use('/api/stuff', stuffRoutes);
+  app.use('/api/auth', userRoutes); // pour authentification
 
 module.exports = app; // pour y accéder depuis note serveur node
